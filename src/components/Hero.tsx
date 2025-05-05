@@ -1,9 +1,12 @@
+"use client"
+
 import element from "/element.svg";
 import { TextHoverEffect } from "./ui/text-hover-effect";
 import { motion, useMotionValue, animate, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import darrow from "/darrow.svg";
 import Loader from "./Loader"; // Import the Loader component
+import { Button } from "../ui/moving-border";
 
 const Hero = () => {
   const img1X = useMotionValue(90);
@@ -27,6 +30,8 @@ const Hero = () => {
         className="lg:min-h-[85vh] min-h-[48vh] flex flex-col justify-between mt-16 py-8 px-6 md:px-12"
       >
         <div className="flex flex-col items-center gap-6 text-center mt-6 ms:mt-4 md:mt-0">
+
+          
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
