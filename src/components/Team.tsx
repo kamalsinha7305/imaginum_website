@@ -15,7 +15,8 @@ export default function Team() {
       description:
         "Driven CEO and development expert, leading the company to create innovative, user-focused solutions.",
       image: sarthak,
-      customImageClass: " lg:object-contain lg:w-full lg:max-h-fit h-full lg:size-[60vw] md:size-[32vw]",
+      customImageClass:
+        "lg:object-contain lg:w-full lg:max-h-fit h-full lg:size-[60vw] md:size-[32vw]",
     },
     {
       name: "Kamal Sinha",
@@ -23,7 +24,8 @@ export default function Team() {
       description:
         "Innovative CTO with expertise in tech development, driving user-centered, cutting-edge solutions.",
       image: kamal,
-      customImageClass: " lg:object-contain lg:w-full lg:max-h-fit h-full lg:size-[60vw] md:size-[32vw]",
+      customImageClass:
+        "lg:object-contain lg:w-full lg:max-h-fit h-full lg:size-[60vw] md:size-[32vw]",
     },
     {
       name: "Anurag Adarsh",
@@ -31,7 +33,8 @@ export default function Team() {
       description:
         "Creative CPO and Head of Design, shaping product vision and user experiences to drive innovation.",
       image: anurag,
-      customImageClass:" lg:object-contain lg:w-full lg:max-h-fit h-full lg:size-[60vw] md:size-[32vw]",
+      customImageClass:
+        "lg:object-contain lg:w-full lg:max-h-fit h-full lg:size-[60vw] md:size-[32vw]",
     },
     {
       name: "Utkarsh Raj",
@@ -39,13 +42,14 @@ export default function Team() {
       description:
         "Visionary Head of Development, leading teams to build innovative and scalable technology solutions.",
       image: utkarsh,
-      customImageClass: " lg:object-contain lg:w-full lg:max-h-fit h-full lg:scale-[40vw] md:size-[32vw]",
+      customImageClass:
+        "lg:object-contain lg:w-full lg:max-h-fit h-full lg:scale-[40vw] md:size-[32vw]",
     },
   ];
 
   return (
     <section aria-labelledby="team-heading" id="team-home">
-      <div className="text-white font-geist font-bold text-2xl md:text-3xl px-6 lg:px-[6rem] md:px-[6.6vw]  flex flex-col gap-4 md:mt-36 mt-24 mb-10">
+      <div className="text-white font-geist font-bold text-2xl md:text-3xl px-6 lg:px-[6rem] md:px-[6.6vw] flex flex-col gap-4 md:mt-36 mt-24 mb-10">
         <div className="flex items-center">
           <img src={square} alt="Team section icon" className="size-9" />
           <h1 id="team-heading" className="pl-4 md:pl-[1rem]">
@@ -55,38 +59,47 @@ export default function Team() {
         <div className="border-gradient-custom w-[6rem] shadow-[0px_0px_7px_0px_rgba(0,221,255,1.00)] outline outline-[3px] outline-offset-[-2.5px] outline-cyan-400/40 rounded"></div>
       </div>
 
-      <div className="items-center justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:ml-[2.6vw] md:ml-0 px-[12vw]  gap-6 lg:gap-0 md:px-[6.6vw] ">
+      <div className="items-center justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:ml-[2.6vw] md:ml-0 px-[12vw] gap-6 lg:gap-0 md:px-[6.6vw]">
         {teamMembers.map((member, index) => (
           <motion.article
             key={index}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="w-[70vw] sm:w-[70vw]  md:w-[38vw] lg:w-[17.5vw] bg-gradient-to-tl from-[#000000] to-[#002774] border border-[#575757]   rounded-xl overflow-hidden flex flex-col  "
+            whileHover={{ scale: 1.03 }}
+            className="group w-[70vw] sm:w-[70vw] md:w-[38vw] lg:w-[17.5vw] bg-gradient-to-tl from-[#000000] to-[#002774] border border-[#575757] rounded-xl overflow-hidden flex flex-col transition-all duration-300 ease-in-out shadow-md hover:shadow-[0px_0px_16px_#00FFFF60]"
           >
             {/* Top Section */}
-            <div className="relative bg-[#f1f1f1] h-[220px] flex justify-center items-end px-4">
+            <div className="relative bg-[#f1f1f1] h-[220px] flex justify-center items-end px-4 overflow-hidden">
               {/* Social Icons */}
-              <div className="absolute top-2 right-2 flex gap-2 z-10">
+              <div className="absolute top-2 right-2 flex gap-2 z-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300 ease-in-out">
                 <a href="#" aria-label="Close">
-                  <img src={x} alt="Close" className="w-7 h-7 p-1 transform hover:scale-[125%] transition duration-300 ease-in-out" />
+                  <img
+                    src={x}
+                    alt="Close"
+                    className="w-7 h-7 p-1 transform hover:scale-125 transition duration-300 ease-in-out"
+                  />
                 </a>
                 <a href="#" aria-label="LinkedIn">
-                  <img src={linkedin} alt="LinkedIn" className="w-7 h-7 p-1 transform hover:scale-[125%] transition duration-300 ease-in-out" />
+                  <img
+                    src={linkedin}
+                    alt="LinkedIn"
+                    className="w-7 h-7 p-1 transform hover:scale-125 transition duration-300 ease-in-out"
+                  />
                 </a>
               </div>
 
-            
+              {/* Team Member Image */}
               <img
                 src={member.image}
                 alt={member.name}
-                /* className=" lg:object-contain lg:w-full lg:max-h-fit h-full lg:size-[60vw] md:size-[32vw]" */
-                className={`${member.customImageClass}`}
+                className={`${member.customImageClass} transition-transform duration-300 group-hover:scale-105`}
                 loading="lazy"
               />
             </div>
 
+            {/* Bottom Section */}
             <div className="px-4 py-5 flex flex-col gap-2 text-white">
               <div>
                 <h1 className="font-bold text-lg">{member.name}</h1>
