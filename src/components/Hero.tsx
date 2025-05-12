@@ -5,6 +5,11 @@ import { useRef, useState } from "react";
 import darrow from "/darrow.svg";
 import Loader from "./Loader"; // Import the Loader component
 
+
+
+ 
+
+
 const Hero = () => {
   const img1X = useMotionValue(90);
   const img1Y = useMotionValue(0);

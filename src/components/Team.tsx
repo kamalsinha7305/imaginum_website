@@ -15,6 +15,7 @@ export default function Team() {
       description:
         "Driven CEO and development expert, leading the company to create innovative, user-focused solutions.",
       image: sarthak,
+      customImageClass: " lg:object-contain lg:w-full lg:max-h-fit h-full lg:size-[60vw] md:size-[32vw]",
     },
     {
       name: "Kamal Sinha",
@@ -22,6 +23,7 @@ export default function Team() {
       description:
         "Innovative CTO with expertise in tech development, driving user-centered, cutting-edge solutions.",
       image: kamal,
+      customImageClass: " lg:object-contain lg:w-full lg:max-h-fit h-full lg:size-[60vw] md:size-[32vw]",
     },
     {
       name: "Anurag Adarsh",
@@ -29,6 +31,7 @@ export default function Team() {
       description:
         "Creative CPO and Head of Design, shaping product vision and user experiences to drive innovation.",
       image: anurag,
+      customImageClass:" lg:object-contain lg:w-full lg:max-h-fit h-full lg:size-[60vw] md:size-[32vw]",
     },
     {
       name: "Utkarsh Raj",
@@ -36,6 +39,7 @@ export default function Team() {
       description:
         "Visionary Head of Development, leading teams to build innovative and scalable technology solutions.",
       image: utkarsh,
+      customImageClass: " lg:object-contain lg:w-full lg:max-h-fit h-full lg:scale-[40vw] md:size-[32vw]",
     },
   ];
 
@@ -66,10 +70,10 @@ export default function Team() {
               {/* Social Icons */}
               <div className="absolute top-2 right-2 flex gap-2 z-10">
                 <a href="#" aria-label="Close">
-                  <img src={x} alt="Close" className="w-7 h-7 p-1" />
+                  <img src={x} alt="Close" className="w-7 h-7 p-1 transform hover:scale-[125%] transition duration-300 ease-in-out" />
                 </a>
                 <a href="#" aria-label="LinkedIn">
-                  <img src={linkedin} alt="LinkedIn" className="w-7 h-7 p-1" />
+                  <img src={linkedin} alt="LinkedIn" className="w-7 h-7 p-1 transform hover:scale-[125%] transition duration-300 ease-in-out" />
                 </a>
               </div>
 
@@ -77,7 +81,8 @@ export default function Team() {
               <img
                 src={member.image}
                 alt={member.name}
-                className=" lg:object-contain lg:w-full lg:max-h-fit h-full lg:size-[60vw] md:size-[32vw]"
+                /* className=" lg:object-contain lg:w-full lg:max-h-fit h-full lg:size-[60vw] md:size-[32vw]" */
+                className={`${member.customImageClass}`}
                 loading="lazy"
               />
             </div>
