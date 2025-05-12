@@ -97,7 +97,7 @@ const Navbar = () => {
             animate="visible"
             exit="exit"
             variants={menuVariants}
-            className=" absolute right-[9.2vw] h-[5.8vh] flex justify-center items-center bg-transparent/10 shadow-3xl z-40 p-4  rounded-2xl border-1 border-gray-700 backdrop-blur-sm"
+            className=" absolute md:right-[8.5vw] lg:right-[9.2vw] h-[5.8vh] flex justify-center items-center bg-transparent/10 shadow-3xl z-40 p-4  rounded-2xl border-1 border-gray-700 backdrop-blur-sm"
           >
             <div className="hidden md:block">
             <nav className="flex flex-row gap-6 ">
@@ -198,7 +198,7 @@ const Navbar = () => {
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
         whileHover={!isOpen ? { scale: 1.1, rotate: 5 } : {}}
-        className={`absolute hidden md:block right-[5.8vw] z-50 p-2 rounded-full shadow-md transition-colors ${isOpen
+        className={`absolute hidden md:block md:right-[3vw] lg:right-[5.8vw] z-50 p-2 rounded-full shadow-md transition-colors ${isOpen
           ? 'bg-red-700 hover:bg-red-600 hover:scale-[125%] text-white'
           : 'bg-gray-800 hover:bg-gray-700 text-white'
           }`}

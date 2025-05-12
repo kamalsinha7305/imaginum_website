@@ -65,14 +65,14 @@ export default function Team() {
             key={index}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
+            transition={{ duration: 0.2, ease: "easeOut", delay: index * 0.1 }}
             viewport={{ once: true }}
             whileHover={{ scale: 1.03 }}
             className="group w-[70vw] sm:w-[70vw] md:w-[38vw] lg:w-[17.5vw] bg-gradient-to-tl from-[#000000] to-[#002774] border border-[#575757] rounded-xl overflow-hidden flex flex-col transition-all duration-300 ease-in-out shadow-md hover:shadow-[0px_0px_16px_#00FFFF60]"
           >
-            {/* Top Section */}
+         
             <div className="relative bg-[#f1f1f1] h-[220px] flex justify-center items-end px-4 overflow-hidden">
-              {/* Social Icons */}
+            
               <div className="absolute top-2 right-2 flex gap-2 z-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300 ease-in-out">
                 <a href="#" aria-label="Close">
                   <img
@@ -90,7 +90,7 @@ export default function Team() {
                 </a>
               </div>
 
-              {/* Team Member Image */}
+     
               <img
                 src={member.image}
                 alt={member.name}
@@ -99,7 +99,7 @@ export default function Team() {
               />
             </div>
 
-            {/* Bottom Section */}
+ 
             <div className="px-4 py-5 flex flex-col gap-2 text-white">
               <div>
                 <h1 className="font-bold text-lg">{member.name}</h1>
